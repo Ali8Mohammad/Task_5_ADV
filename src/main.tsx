@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import './index.css';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SignIn from './pages/SignIn/SignIn';
@@ -9,6 +9,7 @@ import ShowItemInfo from './pages/ShowItemInfo/ShowItemInfo';
 import AddItem from './pages/AddItem/AddItem';
 import EditItem from './pages/EditItem/EditItem';
 import DeleteItem from './pages/DeleteItem/DeleteItem';
+import NotFound from './pages/NotFound/NotFound';  // استيراد صفحة الخطأ
 import App from './App';
 
 const router = createBrowserRouter([
@@ -17,8 +18,8 @@ const router = createBrowserRouter([
     element: <App />, 
     children: [
       {
-          path: "/",
-          element: <SignIn />,
+        path: "/",
+        element: <SignIn />,
       },
       {
         path: "signup",
@@ -43,11 +44,14 @@ const router = createBrowserRouter([
       {
         path: "delete-item/:id",
         element: <DeleteItem />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       }
     ]
   },
 ]);
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

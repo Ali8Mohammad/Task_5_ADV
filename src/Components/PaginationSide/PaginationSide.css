@@ -52,3 +52,18 @@
     left: 16px;
     font-size: 14px;
 }
+.delete-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000;
+  }
+  
+  .delete-modal button {
+    margin: 5px;
+  }
+  

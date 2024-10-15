@@ -2,3 +2,37 @@
     width: 100%;
     text-align: center;
 } 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .pagination-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-btn.active {
+    background-color: #fbb03b; 
+    color: white;
+    border-color: #fbb03b;
+  }
+  
+  .pagination-btn:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  .pagination-dots {
+    display: inline-block;
+    padding: 0.5rem;
+    color: #999;
+  }
+  

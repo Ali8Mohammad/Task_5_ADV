@@ -9,7 +9,6 @@ const AddItem: React.FC = () => {
   const [image, setImage] = useState<File | null>(null);
   const navigate = useNavigate();
 
-  // Handle image file input change
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
     if (file) {
@@ -17,7 +16,6 @@ const AddItem: React.FC = () => {
     }
   };
 
-  // Handle form submission
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 

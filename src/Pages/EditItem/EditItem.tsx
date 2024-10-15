@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const EditItem: React.FC = () => {
-  const { id } = useParams(); // جلب الـ id من الرابط
+  const { id } = useParams(); 
   const navigate = useNavigate();
   
   const [item, setItem] = useState({

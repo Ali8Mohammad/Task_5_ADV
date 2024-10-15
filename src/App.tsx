@@ -1,9 +1,21 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 const App: React.FC = () => {
+  const location = useLocation();
+
+
+  const hideSidebarPages = ['/', '/signup', '/404']; 
+
+  
+  const shouldShowSidebar = !hideSidebarPages.includes(location.pathname);
+
   return (
-    <Outlet />
+    <>
+      {shouldShowSidebar && <Sidebar />}
+      <Outlet />
+    </>
   );
 };
 
