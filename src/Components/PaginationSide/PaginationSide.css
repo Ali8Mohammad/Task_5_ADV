@@ -1,0 +1,54 @@
+.PaginationSide {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    height: 100vh;
+    width: calc(100% - 270px);
+}
+
+.product-item {
+    height: 208px;
+    width: 208px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 952px;
+}
+
+.cardItem {
+    height: 208px;
+    width: 208px;
+    object-fit: contain;
+    box-shadow: 11px 13px 8px #0000004f;
+    border-radius: 16px;
+
+}
+
+.PaginationItem {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.searchInput {
+    width: 664px;
+    padding: 15px 16px;
+    border-radius: 10px;
+    margin: 0 auto 48px auto;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    outline: none;
+}
+.searchInput::placeholder {
+    color: rgba(0, 0, 0, 0.356);
+    position: absolute;
+    left: 16px;
+    font-size: 14px;
+}
